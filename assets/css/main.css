@@ -1,0 +1,167 @@
+@font-face {
+  font-family: medium_font ;
+  src: url('../fonts/HindVadodara-Medium.ttf');
+}
+html {
+  font-family:medium_font,
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .page-enter-active, .page-leave-active{
+    transition: all .25s ease-out;
+  }
+  .page-enter, .page-leave-active{
+    opacity: 0;
+    transform-origin: 50% 50%;
+  }
+  .notification{
+   
+    right: 0;
+    position: fixed;
+    z-index: 999;
+    height: auto;
+    min-width: 300px;
+    padding: 6px 12px;
+    background-color: #03162f;
+    border-radius: 4px;
+    margin: 16px;
+    bottom: -10%;
+    opacity: 0;
+transition: all .3s ease-out;
+}
+.notification p{
+  color: #ecf3fd;
+    margin: 4px;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+button{
+  position: relative;
+}
+
+button{
+  height: 36px;
+  padding:8px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  
+    transition: all .1s ;
+  
+}
+
+button:hover ::before{
+  opacity: 1;
+}
+.hoverable:hover::before{
+  opacity: 1;
+}
+.hoverable{
+  position: relative;
+}
+button::before, .hoverable::before{
+  content: '';
+  position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+  background-color: rgb(2, 20, 43,0.12);
+  border-radius: 4px;
+  transition: opacity .3s ease-out;
+  opacity: 0;
+}
+
+.show{
+opacity: 1  !important;
+bottom: 0%  !important;
+}
+
+.text{
+ color: #03162f;
+}
+
+
+input{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 2px;
+  border: solid 1.1px rgba(0,0,0,0.12) ;
+  transition: all .1s ;
+  font-family:inherit;
+}
+  .outline{
+   border:1px solid rgb(2, 20, 43,0.12)
+  }
+  .errorText {
+    border-style: none;
+    color: red;
+    margin-bottom: 0;
+  }
+  .disable {
+    color: #707e8f  !important;
+    background-color: rgb(191, 195, 209)  !important;
+  }
+  .error {
+    border: 2px solid red !important;
+  }
+
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button:focus {
+  outline: 0;
+  outline-offset: -4px;
+}
+
+input,
+button {
+  border-style: none;
+}
+
+a {
+  text-decoration: none;
+}
